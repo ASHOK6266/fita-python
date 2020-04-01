@@ -16,6 +16,6 @@ var1 = string[:]
 var2 = string[::-1]
 #print(var2)
 if(var1 == var2):
-    print("The given string is palindrome")
+    print("The given variable is palindrome")
 else:
-    print("The string is not a palindrome")
+    print("The variable is not a palindrome")
