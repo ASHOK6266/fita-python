@@ -50,7 +50,5 @@ stringVariable = "geeks for geeks"
 print(stringVariable[::-1])
 print(stringVariable[::-4])
 
-print(range(1,100,2))
-
 for i in range(1,100,2):
     print(i)
