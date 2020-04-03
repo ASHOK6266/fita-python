@@ -41,7 +41,7 @@ print(type(converted_variable))
 float_num = 45.44
 print(int(float_num))
 
-'''
+
 
 
 #Reverse a string
@@ -52,3 +52,8 @@ print(stringVariable[::-4])
 
 for i in range(1,100,2):
     print(i)
+
+l = range(1,100,2)
+print(l)
+
+'''
