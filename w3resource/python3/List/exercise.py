@@ -33,17 +33,38 @@ HOW TO FIND THE LENGTH
 
 sample =  ['abc', 'xyz', 'aba', '1221','1']
 
+empty = []
+empty2 =[]
+
+#empty2.extend()
+
 for x in sample:
     if len(x) >= 2 and x[0] == x[-1]:
-        print(x)
-'''
+        empty.append(x)
+        empty2.extend(list(x)) # The return format will be in the form of list
+print(len(empty))
 
 7. Write a Python program to remove duplicates from a list
 
 sampleList = ['1','ak','ak','1','5']
 
 
+tup = ('1','2')
+se = {'1','55','65'}
+list1 = []
+list2 = []
+list1.extend(tup)
+list1.extend(se)
 
+# Always should use append
+list2.append(tup) 
 
+print(list2)
+'''
+dict3 = {'as': 33, 'ak': 33, 'an': 33}
 
-
+'''
+for k,v in dict3.items():
+    #print(k)
+'''    
+print(dict3.values())

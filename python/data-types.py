@@ -57,3 +57,14 @@ l = range(1,100,2)
 print(l)
 
 '''
+
+# REMOVE A VALUE FROM THE LIST USING INDEX NUMBER
+fruits = ["apple","orange","banana","kiwi"]
+
+del fruits[0]
+
+print(fruits)
+
+
+
+
