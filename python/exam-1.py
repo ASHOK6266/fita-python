@@ -27,14 +27,16 @@ print(dicts)
 
 '''
 
-sampleSentence = ' GeeksforGeEks'
+sampleSentence = ' GeeksforGeEks !!!'
 
 i = 0
 
 vowelCheck = set('aeiouAEIOU')
+specialCharacters = set('!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~')
 
 listsVowels = []
 listsSpace = []
+listsCharacters = []
 
 while i < len(sampleSentence):
     print(sampleSentence[i])
@@ -42,7 +44,12 @@ while i < len(sampleSentence):
         listsVowels.append(sampleSentence[i])
     elif sampleSentence[i] == " ":
         listsSpace.append(sampleSentence[i])
+    elif sampleSentence[i] in specialCharacters:
+        listsCharacters.append(sampleSentence[i])
+    
     i +=1
     
 print("Number of vowels in sample sentence is ",len(listsVowels))
 print("Number of white space in sample sentence is ",len(listsSpace))
+print("Number of special characters in sample sentence is ",len(listsCharacters))
+
