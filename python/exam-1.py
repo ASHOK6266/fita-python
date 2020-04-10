@@ -27,14 +27,22 @@ print(dicts)
 
 '''
 
-sampleSentence = 'Hello! From this sentence I am going to find the number of consonants vowels white spaces and special characters!!!!'
+sampleSentence = ' GeeksforGeEks'
 
 i = 0
 
+vowelCheck = set('aeiouAEIOU')
+
+listsVowels = []
+listsSpace = []
+
 while i < len(sampleSentence):
-    #print(sampleSentence[i])
-    if sampleSentence[i] == 'aeiou':
-        lists = []
-        lists.append(i)
-        print(lists)
-    i += 1
+    print(sampleSentence[i])
+    if sampleSentence[i] in vowelCheck:
+        listsVowels.append(sampleSentence[i])
+    elif sampleSentence[i] == " ":
+        listsSpace.append(sampleSentence[i])
+    i +=1
+    
+print("Number of vowels in sample sentence is ",len(listsVowels))
+print("Number of white space in sample sentence is ",len(listsSpace))
