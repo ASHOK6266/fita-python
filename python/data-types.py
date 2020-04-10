@@ -41,9 +41,6 @@ print(type(converted_variable))
 float_num = 45.44
 print(int(float_num))
 
-
-
-
 #Reverse a string
 
 stringVariable = "geeks for geeks"
@@ -64,6 +61,14 @@ fruits = ["apple","orange","banana","kiwi"]
 del fruits[0]
 
 print(fruits)
+
+# REMOVE
+
+
+# POP
+
+
+
 
 
 
