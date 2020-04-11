@@ -84,7 +84,7 @@ secondList = [4,6,7]
 sampleList.extend(secondList)
 print(sampleList)
 print(sampleList[4])
-'''
+
 #Indexing
 
 
@@ -92,3 +92,38 @@ print(sampleList[4])
 
 lists = ['ak','vk','pk','rk','sk']
 print(lists[-3::-1]) # start #stop # step
+
+
+countries = ["India","France","USA"]
+print(countries[1])
+
+dicts = {
+    student1: ["ashok",25,"developer"],
+    student2 : ["venkat",22,"developer"]
+}
+
+
+
+#sampleSentence = " I am going to take number of white spaces "
+#print(sampleSentence[0])"
+
+string = "Hello string"
+#print(sampleSentence[::])
+
+#for i in string:
+#    print(i)
+
+
+i = 0
+
+while i < len(string):
+    print(string[i])
+    i += 1
+
+'''
+
+
+
+
+
+
