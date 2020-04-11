@@ -122,8 +122,17 @@ while i < len(string):
 
 '''
 
+sampleString = " Finding the number of white spaces !"
+
+i = 0
+
+listsWhiteSpace = []
 
 
+while i < len(sampleString):
+    #print(sampleString[i])
+    if(sampleString[i]) == " ":
+        listsWhiteSpace.append(sampleString[i])
+    i += 1
 
-
-
+print(len(listsWhiteSpace))
