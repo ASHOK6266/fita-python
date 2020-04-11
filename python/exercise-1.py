@@ -1,7 +1,7 @@
 '''
 rengineering, backward propogation, reverse engineering
 
-'''
+
 data = ('india', 'maldives', 'nepal', 'Bangaladesh', 'srilanka')
 
 hit_request = ['Na','german', 'chile', 'Australia']
@@ -32,4 +32,47 @@ for i in hit_request:
 
 #print(dit)
 
+
+# CREATE A FILE
+
+new_file = open("test.md","w")
+
+new_file.write("This is the readme file")
+
+# READING A FILE
+
+read_file = open("test.md","r")
+
+result = read_file.read()
+result1 = read_file.readlines()
+
+#print(len(result))
+
+i = 0
+
+lists = []
+
+#print(len(result))
+
+while i < len(result):
+    lists.append(result[i])
+    i += 1
+
+f = open("test.md","r+")
+value = f.read().splitlines() # inbuilt function
+print(len(value))
+
+print(value[:293])
+
+'''
+s= 'my name is senthil'
+
+#print(s[3])
+
+i = 0
+
+while i < len(s):
+    if(s[i]%2)== 0:
+        print(s[i])
+    i += 1
 

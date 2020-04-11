@@ -29,6 +29,8 @@ print(dicts)
 
 sampleSentence = ' GeeksforGeEks !!!'
 
+"readFile = ("test.md","r")
+
 i = 0
 
 vowelCheck = set('aeiouAEIOU')
@@ -39,7 +41,6 @@ listsSpace = []
 listsCharacters = []
 
 while i < len(sampleSentence):
-    print(sampleSentence[i])
     if sampleSentence[i] in vowelCheck:
         listsVowels.append(sampleSentence[i])
     elif sampleSentence[i] == " ":
@@ -52,4 +53,5 @@ while i < len(sampleSentence):
 print("Number of vowels in sample sentence is ",len(listsVowels))
 print("Number of white space in sample sentence is ",len(listsSpace))
 print("Number of special characters in sample sentence is ",len(listsCharacters))
+
 
