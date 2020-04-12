@@ -29,6 +29,16 @@ with open("test.txt") as testFile:
 print(" The total number of white spaces in the test file is",len(listsSpace))
 
 
+'''
+Using the list comprehension print either even index or odd index from a sentence
 
+'''
 
+sampleInput = input(" Enter a sample sentence to retrieve only the even index :")
 
+#print(type(sampleInput))
+
+#LIST COMPREHENSION
+
+result = [ sampleInput[x] for x in range(0,len(sampleInput)) if x%2 == 0 ]
+print(result)
