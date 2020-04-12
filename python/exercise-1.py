@@ -76,3 +76,7 @@ while i < len(s):
         print(s[i])
     i += 1
 
+thisDict = {
+    "brand":
+}
+

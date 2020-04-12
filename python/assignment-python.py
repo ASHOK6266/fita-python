@@ -15,6 +15,7 @@ fileOpen.close()
 result = open("test.txt","r",encoding="utf-8")
 
 print(result.read(1))
+
 """
 
 listsSpace = []
@@ -24,7 +25,6 @@ with open("test.txt") as testFile:
         for chars in line:
             if chars == " ":
                 listsSpace.append(chars)
-            print(chars[:10:])
 
 print(" The total number of white spaces in the test file is",len(listsSpace))
 
