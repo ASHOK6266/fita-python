@@ -136,3 +136,8 @@ while i < len(sampleString):
     i += 1
 
 print(len(listsWhiteSpace))
+
+
+lists = [1,2,4,5]
+
+print(lists['string'])
