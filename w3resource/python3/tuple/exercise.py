@@ -37,7 +37,7 @@ print(profession)
 
 5. Write a Python program to add an item in a tuple.
 
-'''
+
 # AttributeError: 'tuple' object has no attribute 'append' (If we use append built in function then we get an attribute error in tuple)
 tuplex = ('Hello','Adding a value to tuple',25)
 tuplex1 = ('software engineer',)
@@ -49,3 +49,4 @@ changeAsList = list(concat)
 changeAsList.append('interested in python scripts')
 print(changeAsList)
 
+'''
