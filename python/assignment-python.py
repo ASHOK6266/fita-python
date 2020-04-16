@@ -44,7 +44,7 @@ print(result)
 
 Using lambda function from lists retrieve the words that starts with a
 
-"""
+
 
 lists = ['ak','dk','vk','ud','sd','rv','ana']
 #lists = [2,4,6,7,9]
@@ -53,3 +53,11 @@ value  = list(filter(lambda x: (x[0] == 'a'), lists))
 
 print(value)
 
+
+"""
+
+def add(a,b):
+    print("The sum is :",a+b)
+
+
+add(5,5)

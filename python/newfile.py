@@ -24,3 +24,11 @@ print(str1[-13:-1])
 
 st = "geeksforgeeks"
 print(st[-13:-1:1])
+
+
+
+
+def add(a,b):
+    return a+b
+
+add(5,5)

@@ -49,6 +49,11 @@ changeAsList = list(concat)
 changeAsList.append('interested in python scripts')
 print(changeAsList)
 
+6. Write a Python program to convert a tuple to a string. Go to the editor
+
 '''
 
+tuples = ('1','2','5')
 
+result = str(tuples)
+print(type(result))
