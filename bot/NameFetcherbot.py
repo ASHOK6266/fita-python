@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
-updater = Updater(token="",use_context=True)
+#updater = Updater(token="",use_context=True)
 
 dispatcher = updater.dispatcher
 
@@ -30,7 +30,23 @@ def fetch(update,context):
 fetch_Handler = CommandHandler('fetch',fetch)
 dispatcher.add_handler(fetch_Handler)
 
+def main():
+    updater =  Updater("",use_context = True)
+
+    dp = updater.dispatcher
+
+    conv_handler = ConversationHandler(
+        entry_points=[CommandHandler('start',start)],
+
+        states =  {
+            GENDER : [MessageHandler(),]
+            
+        }
+    )
+
 
 updater.start_polling()
 
 
+if __name__ == '__main__':
+    main()
