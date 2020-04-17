@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
-updater = Updater(token="1138658257:AAGrzbG6EWU60dt4vJ6XAeUH1ppv7r6oA30",use_context=True)
+updater = Updater(token="",use_context=True)
 
 dispatcher = updater.dispatcher
 
@@ -16,11 +16,21 @@ def start(update, context):
 start_Handler = CommandHandler('start',start)
 dispatcher.add_handler(start_Handler)
 
-updater.start_polling()
-
-
 def echo(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=update.message.text)
 
 echo_handler = MessageHandler(Filters.text, echo)
 dispatcher.add_handler(echo_handler)
+
+def fetch(update,context):
+    with open("file.txt",encoding='utf-8') as f:
+         x = f.read()
+    context.bot.send_message(chat_id=update.effective_chat.id,text=x)
+
+fetch_Handler = CommandHandler('fetch',fetch)
+dispatcher.add_handler(fetch_Handler)
+
+
+updater.start_polling()
+
+
