@@ -21,36 +21,35 @@ def start(update, context):
 
 def echo(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=update.message.text)
-
 #echo_handler = MessageHandler(Filters.text, echo)
 #dispatcher.add_handler(echo_handler)
 
-'''
 def fetch(update,context):
     with open("file.txt",encoding='utf-8') as f:
          x = f.read()
     context.bot.send_message(chat_id=update.effective_chat.id,text=x)
 
-fetch_Handler = CommandHandler('fetch',fetch)
-dispatcher.add_handler(fetch_Handler)
-'''
+#fetch_Handler = CommandHandler('fetch',fetch)
+#dispatcher.add_handler(fetch_Handler)
+
 
 def opinion(update, context):
     user = update.message.from_user
     logger.info("Bio of %s: %s", user.first_name, update.message.text)
     update.message.reply_text('Thank you! I hope we can talk again some day.')
 
-    return OPINION
+    return PHOTO
 
 def main():
-    updater =  Updater("1138658257:AAEBVmaTh6sC9Ns858VfhCY-rSfKjhjLp0w",use_context=True)
+    updater =  Updater("",use_context=True)
     
     dp = updater.dispatcher
     
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start',start)],
         states = {
-            OPINION : [MessageHandler(Filters.opinion),opinion]})
+            PHOTO: [MessageHandler(Filters.photo, photo),
+                    CommandHandler('skip', skip_photo)],})
 
 
     updater.start_polling()
