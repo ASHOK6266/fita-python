@@ -11,8 +11,9 @@ dispatcher = updater.dispatcher
 
 
 def start(update, context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="I'm a bot, please talk to me!")
-
+    with open("file.txt",encoding='utf-8') as f:
+        x = f.read()
+    context.bot.send_message(chat_id=update.effective_chat.id,text=x)
 start_Handler = CommandHandler('start',start)
 dispatcher.add_handler(start_Handler)
 
@@ -22,6 +23,7 @@ def echo(update, context):
 echo_handler = MessageHandler(Filters.text, echo)
 dispatcher.add_handler(echo_handler)
 
+'''
 def fetch(update,context):
     with open("file.txt",encoding='utf-8') as f:
          x = f.read()
@@ -29,7 +31,7 @@ def fetch(update,context):
 
 fetch_Handler = CommandHandler('fetch',fetch)
 dispatcher.add_handler(fetch_Handler)
-
+'''
 def main():
     updater =  Updater("",use_context = True)
 
@@ -39,8 +41,8 @@ def main():
         entry_points=[CommandHandler('start',start)],
 
         states =  {
-            GENDER : [MessageHandler(),]
-            
+            OPINION : [MessageHandler(Filters.opinion),opinion]
+
         }
     )
 
