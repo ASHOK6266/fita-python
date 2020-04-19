@@ -12,7 +12,7 @@ Pass a detailed name, age, from and destination, fare
 '''
 
 def calculateFare(*passengerDetails):
-    #print(passengerDetails)
+    print(type(passengerDetails))
     TicketFare = 100
     for detail in passengerDetails:
         if detail[1] < 3:
@@ -20,14 +20,26 @@ def calculateFare(*passengerDetails):
         elif detail[1] > 3 and detail[1] < 12:
             print(" Chraging 50 percentage")
         elif detail[1] > 12 and detail[1] < 15:
-            print(" Charging 70 percentage ")
+            #result = list(passengerDetails)
+            return passengerDetails
         else:
-            print(TicketFare)
+            #result = list(passengerDetails)
+            #result.insert(2,TicketFare)
+            return passengerDetails
+
+print(calculateFare(['sara',18,'Munich','Frankfort']))
 
 
-calculateFare(['sara',16,'Munich','Frankfort'])
 
 
+'''
+def testFunction(*paras):
+    for item in paras:
+        print(type(item))
+
+testFunction(['sara',18,'M','f'])
+
+'''
 
 '''
 12 cards , random split -> sequence number exits 
