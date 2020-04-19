@@ -12,31 +12,45 @@ Pass a detailed name, age, from and destination, fare
 '''
 
 def calculateFare(*passengerDetails):
-    print(type(passengerDetails))
-    TicketFare = 100
+    #print(type(passengerDetails))
+    TicketFare = 150
     for detail in passengerDetails:
         if detail[1] < 3:
-            print("No fare charges")
+            result = list(detail)
+            TicketFare = 0
+            result.insert(2,TicketFare)
+            return result
         elif detail[1] > 3 and detail[1] < 12:
-            print(" Chraging 50 percentage")
+            result = list(detail)
+            TicketFare = (150*50)/100
+            result.insert(2,TicketFare)
+            return result
         elif detail[1] > 12 and detail[1] < 15:
-            #result = list(passengerDetails)
-            return passengerDetails
+            result = list(detail)
+            TicketFare = (150*70)/100
+            result.insert(2,TicketFare)
+            return result
         else:
-            #result = list(passengerDetails)
-            #result.insert(2,TicketFare)
-            return passengerDetails
+            result = list(detail)
+            result.insert(2,TicketFare)
+            return result
+pass1 = ['papa',2,'Munich','Frankfort']
+pass2 = ['Max',5,'Munich','Frankfort']
+pass3 = ['sara',14,'Munich','Frankfort']
+pass4 = ['Clara',21,'Munich','Frankfort']
 
-print(calculateFare(['sara',18,'Munich','Frankfort']))
+print(calculateFare(pass1))
+print(calculateFare(pass2))
+print(calculateFare(pass3))
+print(calculateFare(pass4))
 
 
 
 
 '''
-def testFunction(*paras):
-    for item in paras:
-        print(type(item))
 
+def testFunction(*paras):
+    print(paras[0])
 testFunction(['sara',18,'M','f'])
 
 '''
