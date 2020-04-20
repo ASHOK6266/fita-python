@@ -55,14 +55,15 @@ testFunction(['sara',18,'M','f'])
 
 '''
 2.
-12 cards , random split -> sequence number exits 
+There are two members and split the card 
+12 cards , random split (0-12)-> 3 sequence number exits 
 	Random in built method, sort
 
+    find who has rummy
+
+
+
 '''
-
-
-
-
 
 
 
@@ -144,12 +145,18 @@ At last, an outer function will add 5 into addition and return it
 '''
 
 
-def outerFunc(a,b):
-    def innerFunc():
-        sum = a+b
-        return sum
+def outerFunction(a,b):
+    def innerFunction():
+        sums = a + b
+        return sums
+    innerFunction()
+    
 
-print(outerFunc(5,5))
+
+print(outerFunction(5,5))
+
+    
+
 
 
 
