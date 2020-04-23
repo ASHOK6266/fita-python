@@ -2,6 +2,8 @@ import logging
 
 from telegram.ext import Updater, CommandHandler
 
+from itertools import islice
+
 '''
 
 To set up the log module import mogging is used
@@ -17,17 +19,22 @@ Main function:
     2. A dispatcher to register the handlers
 
 
-
+with open("file.txt",encoding='utf-8') as f:
+    for line in range(2):
+        print(f.readline())
 
 '''
-
-
 
 #Commmand Handlers
 def start(update,context):
     #update.message.reply_text('Hello! I am your name fetcher bot')
+    number_of_lines = 4
     with open("file.txt",encoding='utf-8') as f:
-            update.message.reply_text(f.read())
+        for line in range(3):
+            update.message.reply_text(f.readline())
+
+
+
 
 
 
