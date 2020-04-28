@@ -27,11 +27,11 @@ with open("file.txt",encoding='utf-8') as f:
 
 #Commmand Handlers
 def start(update,context):
-    #update.message.reply_text('Hello! I am your name fetcher bot')
-    number_of_lines = 4
     with open("file.txt",encoding='utf-8') as f:
-        for line in range(3):
-            update.message.reply_text(f.readline())
+        for line in range(4):
+            keyboard = [InlineKeywordButton("f.readline()")]
+            reply_markup = InlineKeywordMarkup(keyboard)
+            update.message.reply_text('Choose the most aimable words from the list :',reply_markup=reply_markup) # f[0] f[1] f[2]
 
 
 

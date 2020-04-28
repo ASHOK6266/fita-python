@@ -9,26 +9,19 @@ for i in l:
 copy
 '''
 
-#1. normal copy /assignment
-
-i = 10
-j = i 
-
-#2. slicing
-
-'''
-str1 = 'welcome'
-print(str1[0:13])
-print(str1[-13:-1])
-'''
-
-st = "geeksforgeeks"
-print(st[-13:-1:1])
 
 
 
+def checkCaps(text):
+    for i in text:
+        if i.isupper():
+            return True
+        elif i == "":
+            return True
+        else:
+            return False 
 
-def add(a,b):
-    return a+b
-
-add(5,5)
+print(checkCaps("ALL IS WELL"))
+print(checkCaps("Hi"))
+print(checkCaps("   "))
+print(checkCaps("dhgzx"))
