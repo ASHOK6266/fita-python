@@ -52,3 +52,26 @@ if __name__ == '__main__':
     assert is_even(5) == False
     assert is_even(0) == True
     print("Coding complete? Click 'Check' to earn cool rewards!")
+
+
+ def split_pairs(a):
+    # your code here
+    if len(a)%2 == 0:
+        result = a.split(2)
+    elif len(a) <= 0:
+        return a
+        
+    return None
+
+
+if __name__ == '__main__':
+    print("Example:")
+    print(list(split_pairs('abcd')))
+
+    # These "asserts" are used for self-checking and not for an auto-testing
+    assert list(split_pairs('abcd')) == ['ab', 'cd']
+    assert list(split_pairs('abc')) == ['ab', 'c_']
+    assert list(split_pairs('abcdf')) == ['ab', 'cd', 'f_']
+    assert list(split_pairs('a')) == ['a_']
+    assert list(split_pairs('')) == []
+    print("Coding complete? Click 'Check' to earn cool rewards!")
