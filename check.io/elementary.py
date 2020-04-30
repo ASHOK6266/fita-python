@@ -9,9 +9,7 @@ Input: List.
 Output: Iterable.
 
 '''
-
 from typing import Iterable
-
 
 def replace_first(items: list) -> Iterable:
     # your code here
@@ -24,7 +22,6 @@ def replace_first(items: list) -> Iterable:
         items.append(insert_item)
         return items
 
-
 if __name__ == '__main__':
     print("Example:")
     print(list(replace_first([1, 2, 3, 4])))
@@ -34,7 +31,6 @@ if __name__ == '__main__':
     assert list(replace_first([1])) == [1]
     assert list(replace_first([])) == []
     print("Coding complete? Click 'Check' to earn cool rewards!")
-
 
 def is_even(num: int) -> bool:
     # your code here
