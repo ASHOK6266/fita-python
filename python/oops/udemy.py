@@ -1,3 +1,4 @@
+'''
 class Employee:
     def employeeDetails(self):
         self.name = "Ashok kumar BASKARAN"
@@ -12,3 +13,16 @@ class Employee:
 employee = Employee()
 employee.employeeDetails()
 employee.printEmployeeDetails()
+
+'''
+
+class Employee:
+
+    def employeeDetails(self):
+        self.name = "Ashok"
+
+    @staticmethod
+    def welcomeMessage():
+        print("Welcome to this organisation")
+employeeOne = Employee
+employeeOne.welcomeMessage()
