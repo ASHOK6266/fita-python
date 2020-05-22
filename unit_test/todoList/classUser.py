@@ -16,7 +16,7 @@ class User():
         else:
             return False
         
-    
+
     def firstName(self):
         if self.firstname.isalpha() and self.lastname.isalpha():
             return True
@@ -43,7 +43,7 @@ class User():
                     if self.Age():
                         print("The user is valid user")
                         return True
-
+                        #  Here we should connect to the database and post the user in database
 
 userOne = User("ashok@gmail.com","ashok","baskaran","azertyzgvcye",26)
 userOne.isValid()
